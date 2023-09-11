@@ -1,7 +1,13 @@
 import { Banner } from "../../componnts/Banner";
+import { About } from "../../componnts/About";
+
 const Home = () => {
     return (
-        <Banner />
+        <>
+            <Banner />
+            <About />
+        </>
+       
     )
 }
 export default Home;
