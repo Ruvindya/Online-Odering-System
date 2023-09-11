@@ -14,7 +14,6 @@ export const About=()=>{
                     <img src={aboutImage} alt="" className="w-[400px] h-[400px] object-cover" />
                 </div>
             </div>
-
         </div>
     )
 }
