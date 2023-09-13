@@ -1,13 +1,13 @@
 const mongoose = require('mongoose');
-const Shema = mongoose.Shema
+const Schema = mongoose.Schema
 
-const CategoryShema = new Shema(
+const CategoryShema = new Schema (
     {
         name: {type: String, required: true}
     }
 )
 
-const ProductShema = new Shema(
+const ProductShema = new Schema (
     {
         name: {type: String, required: true },
         adjective: {type: String, required: true },

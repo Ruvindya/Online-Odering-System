@@ -28,7 +28,19 @@ async function main() {
             let newProduct = {
                 name: faker.commerce.productName(),
                 adjective: faker.commerce.productAdjective(),
-                description: faker.commerce.description(),
+                description: faker.commerce.productDescription(),
                 price: faker.commerce.price(),
                 category: _.sample(categories),
-                imageUrls: _.sample(im
+                imageUrls: _.sample(imageUrls)
+            };
+            products.push(newProduct);
+
+        }
+        await productsCollection.insertMany(products);
+    }catch (e) {
+        console.error(e);
+    } finally {
+        await client.close();
+    }
+}
+main();
